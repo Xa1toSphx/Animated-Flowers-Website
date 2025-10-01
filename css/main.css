@@ -1111,24 +1111,41 @@ body {
   transform: translateX(-50%);
   width: 80%;
   max-width: 800px;
+  max-height: 70vh;   /* restricts height */
+  overflow-y: auto;   /* enable scroll if text too long */
   padding: 30px;
   background: rgba(0, 0, 0, 0.9);
   color: white;
   border-radius: 20px;
   box-shadow: 0 0 25px #875fe4;
-  text-align: justify;
-  font-family: "nunito";
-  font-size: 1rem;
+  text-align: left;   /* easier for long letter reading */
+  font-size: 1.2rem;
   line-height: 1.8;
   animation: fadeIn 1.5s ease-in-out;
   z-index: 1000;
 }
 
+/* Letter heading */
 #letter-container h2 {
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #ffb6f9;
+  text-align: center;
   text-shadow: 0 0 12px #875fe4;
+}
+
+/* Custom scrollbar (for better look) */
+#letter-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#letter-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#letter-container::-webkit-scrollbar-thumb {
+  background: #875fe4;
+  border-radius: 10px;
 }
 
 #back-to-flowers {
