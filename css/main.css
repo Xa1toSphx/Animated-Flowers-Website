@@ -1065,6 +1065,7 @@ body {
   transform: translateX(-50%);
   padding: 12px 20px;
   font-size: 1rem;
+  font-family: "nunito", sans-serif;
   border: none;
   border-radius: 12px;
   background: #875fe4;
@@ -1129,6 +1130,25 @@ body {
   color: #ffb6f9;
   text-shadow: 0 0 12px #875fe4;
 }
+
+#back-to-flowers {
+  margin-top: 20px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: #875fe4;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 12px #875fe4, 0 0 30px #875fe4;
+  transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+#back-to-flowers:hover {
+  transform: scale(1.1);
+  background: #a786f5;
+}
+
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-50%, -60%); }

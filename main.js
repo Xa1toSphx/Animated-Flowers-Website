@@ -10,6 +10,7 @@ window.onload = () => {
   const button = document.getElementById("show-letter");
   const letter = document.getElementById("letter-container");
   const textElement = document.getElementById("letter-text");
+  const backBtn = document.getElementById("back-to-flowers");
 
   button.addEventListener("click", () => {
     letter.style.display = "block";
@@ -26,6 +27,13 @@ window.onload = () => {
       if (index >= text.length) {
         clearInterval(typing);
       }
-    }, 40); // speed of typing (ms per character)
+    }, 40); // speed of typing
+  });
+
+  // Back button logic
+  backBtn.addEventListener("click", () => {
+    letter.style.display = "none";   // hide letter
+    button.classList.add("show");    // bring back "Read My Letter"
+    button.style.display = "block";  // ensure it shows again
   });
 };

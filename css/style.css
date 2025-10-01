@@ -50,15 +50,46 @@ body{
     margin-bottom: 20px;
 }
 
-.button a{
-    text-decoration: none;
+/* ---- New Button Style ---- */
+#go-flower {
+    padding: 12px 20px;
     font-size: 1rem;
-    color: #875fe4;
+    border: none;
     border-radius: 12px;
-    font-size: .5rem;
-    box-shadow: 0 0 12px #875fe4, 0 0 50px #875fe4, 0 0 100px #875fe4;
-    background-color: #cdb9fc;
+    background: #875fe4;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 0 12px #875fe4, 0 0 30px #875fe4;
+    opacity: 0;
+    animation: none;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out, background 0.3s;
+}
 
+#go-flower:hover {
+    transform: scale(1.1);
+    background: #a08ef8;
+}
+
+/* Pop-up animation */
+#go-flower.show {
+    animation: popUp 1s ease forwards;
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @media screen and (max-width:574px){
@@ -71,5 +102,4 @@ body{
     .description{
         font-size: 1rem;
     }
-    
 }
