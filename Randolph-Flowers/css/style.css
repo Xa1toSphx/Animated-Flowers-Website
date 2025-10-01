@@ -22,7 +22,7 @@ body{
 @keyframes glow{
     0%, 100%{
         color: #fff;
-        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+        text-shadow: 0 0 12px #875fe4, 0 0 50px #875fe4, 0 0 100px #875fe4;
     }
     10%, 90%{
         color: #111;
@@ -53,7 +53,12 @@ body{
 .button a{
     text-decoration: none;
     font-size: 1rem;
-    color: #111;
+    color: #875fe4;
+    border-radius: 12px;
+    font-size: .5rem;
+    box-shadow: 0 0 12px #875fe4, 0 0 50px #875fe4, 0 0 100px #875fe4;
+    background-color: #cdb9fc;
+
 }
 
 @media screen and (max-width:574px){
@@ -67,7 +72,4 @@ body{
         font-size: 1rem;
     }
     
-    .button a{
-        font-size: .5rem;
-    }
 }
